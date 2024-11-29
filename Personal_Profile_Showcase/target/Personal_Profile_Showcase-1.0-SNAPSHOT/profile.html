@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Profile</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Create your profile</h1>
+    </header>
+
+    <script>
+        function toggleFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+
+    <section>
+        <h2>Profile information</h2>
+        <form action="" method="post" enctype='multipart/form-data'>
+            <label for="theme">Dark theme</label>
+            <input type="checkbox" id="theme" name="theme" onclick="toggleFunction()"><br><br>
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" placeholder="Enter name" minlength="2" required><br><br>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="profile_picture">Upload profile picture: </label>
+            <input type="file" id="profile_picture" name="profile_picture" accept="image/*" required><br><br>
+            <label for="song">Upload song: </label>
+            <input type="file" id="song" name="song" accept="audio/*" required><br><br>
+            <label for="video">Upload video: </label>
+            <input type="file" id="video" name="video" accept="video/*" required><br><br>
+            <input type="submit">
+        </form>
+    </section>
+
+    <footer>
+        <br><br><br><br><br>
+        Profile site
+    </footer>
+</body>
+
+</html>
